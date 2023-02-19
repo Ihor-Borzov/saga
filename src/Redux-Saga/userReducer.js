@@ -19,7 +19,7 @@ case SET_USER:
     const {user} = action
 return{...state, user:user}
 
-case SET_USER:
+case SET_TODO:
     const {todo} = action
 return{...state, todo:todo}
 
@@ -35,7 +35,7 @@ export const getUser = () => { return({
 })
 }
 
-export const settUser = (user) => { return({
+export const setUser = (user) => { return({
     type:SET_USER,
     user
 })

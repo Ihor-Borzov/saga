@@ -1,6 +1,6 @@
 import {takeLatest} from "redux-saga/effects"
 import { handleGetToDo, handleGetUser } from "./handlers/user"
-import {GET_USER, SET_TODO} from "../userReducer"
+import {SET_USER, SET_TODO} from "../userReducer"
 
 
 
@@ -9,7 +9,7 @@ import {GET_USER, SET_TODO} from "../userReducer"
 // and we map it with handler function which will actually call the request
 
 export function* watcherSaga ( ) {
-yield takeLatest(GET_USER, handleGetUser)
+yield takeLatest(SET_USER, handleGetUser)
 
 yield takeLatest(SET_TODO,handleGetToDo)
 }
